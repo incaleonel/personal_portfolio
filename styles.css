@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins',sans-serif,Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+body div{
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    background-color: #be3144;
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
+    z-index: 2;
+}
+li{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    
+}
+li a{
+    font-size: 1.5em;
+}
+li:hover{
+    background-color: #45567d;
+}
+
+ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0 5vw 0 0;
+    height: 100%;
+    
+}
+
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+    background-image: linear-gradient(30deg,#333,#111 );
+    height: 100vh;
+    margin-top: 8vh;
+}
+#welcome-section h1, #welcome-section p{
+    margin:0;
+    
+}
+#welcome-section h1{
+    font-size: 2.1em;
+}
+#welcome-section p{
+    margin-top: 2vh;
+    color: #be3144;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+code{
+    color: rgb(255, 154, 71);
+    opacity: 0;
+    font-size: 1.2em;
+    transition: opacity 0.4s  ;
+}
+
+#grid-box div:hover code{
+    opacity: 1;
+    
+}
+
+#projects{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #45567d;
+
+}
+#projects h2{
+    margin-top: 10vh;
+    font-size: 3em;
+    padding: 1vh;
+    border-bottom: 2px solid white;
+}
+#grid-box{
+    display:grid;
+    grid-template-areas: "p1 p2 p3"
+                         "p4 p5 p6";
+    position: relative;
+    gap: 2vw;
+    justify-content: center;
+}
+@media (max-width:1200px){
+    #grid-box{
+        grid-template-areas: "p1 p2"
+                             "p3 p4" 
+                             "p5 p6";
+    }
+}
+
+@media (max-width:900px){
+    #grid-box{
+        grid-template-areas: "p1"
+                             "p2" 
+                             "p3"
+                             "p4"
+                             "p5"
+                             "p6";
+    }
+}
+#grid-box a {
+    background-color: #303841;
+    font-size: 1.4em;
+}
+#box1{
+    grid-area: p1;
+}
+#box2{
+    grid-area: p2;
+}
+#box3{
+    grid-area: p3;
+}
+#box4{
+    grid-area: p4;
+}
+#box5{
+    grid-area: p5;
+}
+#box6{
+    grid-area:p6;
+}
+
+.button{
+    margin-top: 6vh;
+    margin-bottom: 10vh;
+    padding: 0 1em;
+    font-size: 1.4em;
+    background-color: #303841;
+    transition: background-color 0.5s;
+}
+.button p{
+    margin: 0.5em 0;
+}
+.button:hover{
+    background-color: #be3144;
+}
+.fa-chevron-right{
+    transition: transform ease-in 0.5s;
+}
+.button:hover .fa-chevron-right{
+    transition: ease-in 0.5s;
+    transform: translateX(5px);
+}
+
+img{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+
+}
+
+#contact{
+    background-color: #303841;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#box-contact{
+    display:flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    font-size: 1.5em;
+    text-shadow: #000 2px 3px;
+    flex-wrap: wrap;
+}
+
+#contact h2{
+    margin:0;
+    font-size: 3.5em;
+}
+#contact p{
+    font-family:'Courier New', Courier, monospace;
+    margin-top:1vh;
+    margin-bottom: 6vh;
+    font-size: 1.5em;
+    font-weight: 200;
+    font-style: italic;
+    
+}
+
+footer{
+    background-color: #303841;
+    margin:0;
+    border-top: 5px solid #be3144;
+    display: flex;
+    justify-content: center;
+    gap: 12vw;
+}
+
+footer div{
+    margin: 3vh 0;
+    font-size:1.2em;
+}
+
+a{
+    transition: transform 1s ease-out 0s;
+}
+
+#box-contact a:hover{
+    transform:translateY(10px);
+}
